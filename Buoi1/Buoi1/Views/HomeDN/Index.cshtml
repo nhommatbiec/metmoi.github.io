@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @{
+    var user = Session["user"] as Buoi1.Models.User;
+    }
+    @if (user != null)
+    {
+        <h2>Welcome @user</h2>
+        @Html.ActionLink("Đăng Xuất","DangXuat", "DN");
+    }
+</body>
+</html>
